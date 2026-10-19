@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: seed-demo-reference-institutional-unit-001
+      author: JohanAceroSalazar
+      labels: "seed,demo"
+      comment: Demo - unidad institucional del centro demo de reference-data
+      changes:
+        - sqlFile: {path: 001_seed_demo_institutional_unit.sql, relativeToChangelogFile: true, splitStatements: true, stripComments: false}
+      rollback:
+        - sql: {sql: "DELETE FROM institutional_structure.institutional_unit WHERE id='a0000000-0000-0000-0000-000000000006';"}
