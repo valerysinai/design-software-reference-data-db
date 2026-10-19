@@ -1,5 +1,13 @@
 databaseChangeLog:
   - changeSet:
+      id: r1-reference-inbox-projection-001
+      author: valerysinai
+      labels: "R1,ddl,inbox,projection"
+      changes:
+        - sqlFile: {path: 004_create_event_inbox_projection.sql, relativeToChangelogFile: true}
+      rollback:
+        - sqlFile: {path: ../../05_rollbacks/01_ddl/03_tables/004_create_event_inbox_projection.rollback.sql, relativeToChangelogFile: true}
+  - changeSet:
       id: 8b4d9d88-5d6b-4b78-a07f-2a3e8d1f5c91
       author: MariaOyola
       labels: "HU-02-dev,ddl,base,tables"

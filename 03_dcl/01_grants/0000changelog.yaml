@@ -1,5 +1,13 @@
 databaseChangeLog:
   - changeSet:
+      id: r1-reference-inbox-projection-grants-001
+      author: valerysinai
+      labels: "R1,dcl,inbox,projection"
+      changes:
+        - sqlFile: {path: 004_grant_inbox_projection.sql, relativeToChangelogFile: true}
+      rollback:
+        - sqlFile: {path: 004_grant_inbox_projection.rollback.sql, relativeToChangelogFile: true}
+  - changeSet:
       id: dcl-grants-reference-001
       author: jesus-gonzalez
       labels: "dcl,grants"
